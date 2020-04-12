@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/graphql-go/graphql"
@@ -9,11 +10,14 @@ import (
 
 func main() {
 
+	// 1
 	queryType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
+			// 2
 			"hello": &graphql.Field{
 				Type: graphql.String,
+				// 3
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 					return "world", nil
 				},
@@ -21,6 +25,7 @@ func main() {
 		},
 	})
 
+	// 4
 	Schema, err := graphql.NewSchema(graphql.SchemaConfig{
 		Query: queryType,
 	})
@@ -29,6 +34,7 @@ func main() {
 		panic(err)
 	}
 
+	// 5
 	h := handler.New(&handler.Config{
 		Schema: &Schema,
 		Pretty: true,
@@ -36,8 +42,12 @@ func main() {
 
 	// static file server to serve Graphiql in-browser editor
 	fs := http.FileServer(http.Dir("static"))
-
-	http.Handle("/graphql", h)
 	http.Handle("/", fs)
+
+	// graphql api  server
+	http.Handle("/graphql", h)
+
+	fmt.Println("server is started at: http://localhost:8080/")
+	fmt.Println("graphql api server is started at: http://localhost:8080/graphql")
 	http.ListenAndServe(":8080", nil)
 }
