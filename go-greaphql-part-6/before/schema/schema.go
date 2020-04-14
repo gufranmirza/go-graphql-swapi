@@ -4,8 +4,8 @@ import (
 	"strconv"
 
 	"github.com/graphql-go/graphql"
-	"github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-3/before/types"
 	"github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-6/before/resolvers"
+	"github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-6/before/types"
 )
 
 var (

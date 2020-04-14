@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/graphql-go/handler"
-	"github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-2/after/schema"
+	"github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-3/before/schema"
 )
 
 func main() {
