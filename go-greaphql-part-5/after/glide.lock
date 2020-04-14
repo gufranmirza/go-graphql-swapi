@@ -1,0 +1,19 @@
+hash: 350e1d2355acfaa63955ca463003969eab46df5d8eb9c40c83e15e9db2ddb364
+updated: 2020-04-14T09:46:56.822240955+05:30
+imports:
+- name: github.com/dgrijalva/jwt-go
+  version: dc14462fd58732591c7fa58cc8496d6824316a82
+- name: github.com/graphql-go/graphql
+  version: 02caa8943d64d9cd60bd67f2bc163676716bb963
+  subpackages:
+  - gqlerrors
+  - language/ast
+  - language/kinds
+  - language/lexer
+  - language/location
+  - language/parser
+  - language/printer
+  - language/source
+  - language/typeInfo
+  - language/visitor
+testImports: []
