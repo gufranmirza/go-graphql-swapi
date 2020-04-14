@@ -1,0 +1,3 @@
+package: github.com/gufranmirza/go-graphql-swapi
+import:
+- package: github.com/gorilla/websocket

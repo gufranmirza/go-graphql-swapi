@@ -1,0 +1,21 @@
+hash: 21db87e8b9f75d6912e36aa3c8447e4ce44db84f3642cfe996d9e27b49680dce
+updated: 2020-04-14T14:27:01.419742093+05:30
+imports:
+- name: github.com/gorilla/websocket
+  version: ea4d1f681babbce9545c9c5f3d5194a789c89f5b
+- name: github.com/graphql-go/graphql
+  version: 02caa8943d64d9cd60bd67f2bc163676716bb963
+  subpackages:
+  - gqlerrors
+  - language/ast
+  - language/kinds
+  - language/lexer
+  - language/location
+  - language/parser
+  - language/printer
+  - language/source
+  - language/typeInfo
+  - language/visitor
+- name: github.com/graphql-go/handler
+  version: c1267356e6539d975e83bbea383c2bbb861dce5b
+testImports: []
